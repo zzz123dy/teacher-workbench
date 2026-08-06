@@ -1,0 +1,12 @@
+{
+  "name": "教师智能工作台",
+  "short_name": "教师工作台",
+  "description": "班主任与任课教师的智能班级管理助手",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2e1065",
+  "theme_color": "#6d28d9",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
