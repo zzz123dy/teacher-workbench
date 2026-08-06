@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>教师智能工作台 · 班级AI助手</title>
+  <meta name="theme-color" content="#6d28d9" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- SheetJS 解析 Excel -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- mammoth 解析 Word -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+</head>
+<body>
+  <div id="overlay" class="overlay"></div>
+
+  <!-- 左侧导航 -->
+  <aside id="sidebar" class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">智</div>
+      <div class="brand-text">
+        <div class="brand-title">教师智能工作台</div>
+        <div class="brand-sub">班级AI助手</div>
+      </div>
+      <button id="sidebarToggle" class="icon-btn" title="收起/展开">‹</button>
+    </div>
+    <nav id="nav" class="nav"></nav>
+    <div class="sidebar-foot">
+      <div class="user-mini">
+        <div class="avatar" id="sideAvatar">体</div>
+        <div class="user-mini-text">
+          <div id="sideName">体育老师</div>
+          <div id="sideRole">八年级班主任</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 主区域 -->
+  <div class="main">
+    <header class="topbar">
+      <button id="menuBtn" class="icon-btn only-mobile" title="菜单">☰</button>
+      <div class="page-title" id="pageTitle">工作台首页</div>
+      <div class="topbar-search">
+        <input id="globalSearch" type="text" placeholder="搜索学生 / 通知 / 成绩…" />
+      </div>
+      <div class="topbar-right">
+        <button id="importBtn" class="btn ghost" title="导入文件">📥 导入</button>
+        <button id="bellBtn" class="icon-btn bell" title="消息中心">
+          🔔<span class="badge" id="msgBadge" hidden>0</span>
+        </button>
+        <div class="avatar" id="topAvatar">体</div>
+      </div>
+    </header>
+    <main id="content" class="content"></main>
+  </div>
+
+  <!-- 移动端底部导航 -->
+  <nav id="bottomNav" class="bottom-nav only-mobile"></nav>
+
+  <!-- 通用弹窗 -->
+  <div id="modalRoot"></div>
+  <!-- Toast -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/import.js"></script>
+  <script src="js/modules.js"></script>
+  <script src="js/modules2.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
